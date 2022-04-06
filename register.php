@@ -48,18 +48,23 @@
                                         <label class="form-label">Re Password</label>
                                         <input type="password" class="form-control" name="re_password"><br>
                                     </div>
-                                    <div class="form-check  mb-5">
+                                    <div class="form-check  mb-3 ms-auto">
                                         <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
                                         <label class="form-check-label" for="form2Example3g">
                                             I agree all statements in <a href="TermOfService.html" class="text-body"><u>Terms of
                                                     service</u></a>
+                                            
                                         </label>
+                                    </div>
+                                    <div class="mb-5 mx-4">
+                                        <a href="login.php" class="ca"> Already have an account?</a>
                                     </div>
                                     <div class=" d-flex justify-content-center ">
                                         <button type=" submit" class="btn btn-primary px-3">Sign Up</button>
 
                                     </div>
-                                    <a href="login.php" class="ca">Already have an account?</a>
+
+
                                 </form>
                             </div>
                         </div>

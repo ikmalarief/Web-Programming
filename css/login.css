@@ -24,7 +24,7 @@ html::-webkit-scrollbar-thumb {
 body {
     font-family: 'Roboto', 'sans-serif';
     background-color: #010103;
-    padding: 20vh ;
+    padding: 20vh;
 }
 
 h1 {
@@ -32,9 +32,10 @@ h1 {
     font-size: 10px;
 }
 
-.selection{
+.selection {
     width: fit-content;
 }
+
 .design {
     padding: 100px 20px;
     background-color: #000000;
@@ -46,7 +47,7 @@ h1 {
     color: white;
     padding: 10px 50px;
     transition: all 1s;
-    
+
 
 }
 
@@ -56,12 +57,12 @@ h1 {
     transform: translateY(10px);
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: rgb(0, 0, 0);
-    
+
 }

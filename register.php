@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>Register</title>
+    <title>SIGN UP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 
 <body style="padding: 0; ">
@@ -17,44 +17,50 @@
                             <div class="card-body p-5">
                                 <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-                                <form>
+
+                                <form action="php/signup-check.php" method="post">
+                                    <?php if (isset($_GET['error'])) { ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <?= $_GET['error'] ?>
+                                        </div>
+                                    <?php } ?>
 
                                     <div class="form-outline mb-4">
-                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example1cg">Username</label>
+                                        <?php if (isset($_GET['success'])) { ?>
+                                            <p class="success"><?php echo $_GET['success']; ?></p>
+                                        <?php } ?>
+                                    </div>
+                                    <div class="form-outline mb-4 ">
+                                        <label class="form-label">Username</label>
+                                        <?php if (isset($_GET['username'])) { ?>
+                                            <input type="text" name="username" value="<?php echo $_GET['username']; ?>"><br>
+                                        <?php } else { ?>
+                                            <input type="text" class="form-control" name="username" p><br>
+                                        <?php } ?>
                                     </div>
 
-                                    <div class="form-outline mb-4">
-                                        <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example3cg">Your Email</label>
-                                    </div>
 
-                                    <div class="form-outline mb-4">
-                                        <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example4cg">Password</label>
+                                    <div class="form-outline mb-4  ">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" class="form-control" name="password" p><br>
                                     </div>
-
-                                    <div class="form-outline mb-4">
-                                        <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                                    <div class="form-outline mb-4 ">
+                                        <label class="form-label">Re Password</label>
+                                        <input type="password" class="form-control" name="re_password"><br>
                                     </div>
-
-                                    <div class="form-check d-flex justify-content-center mb-5">
+                                    <div class="form-check  mb-5">
                                         <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
                                         <label class="form-check-label" for="form2Example3g">
                                             I agree all statements in <a href="TermOfService.html" class="text-body"><u>Terms of
                                                     service</u></a>
                                         </label>
                                     </div>
+                                    <div class=" d-flex justify-content-center ">
+                                        <button type=" submit" class="btn btn-primary px-3">Sign Up</button>
 
-                                    <div class="d-flex justify-content-center">
-                                        <button type="button" class="btn btn-primary btn-block btn-lg gradient-custom-4  text-white">Register</button>
                                     </div>
-
-                                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login.php" class="fw-bold text-body"><u>Login here</u></a></p>
-
+                                    <a href="login.php" class="ca">Already have an account?</a>
                                 </form>
-
                             </div>
                         </div>
                     </div>
@@ -62,6 +68,7 @@
             </div>
         </div>
     </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

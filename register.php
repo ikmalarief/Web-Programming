@@ -48,29 +48,29 @@
                                         <label class="form-label">Re Password</label>
                                         <input type="password" class="form-control" name="re_password"><br>
                                     </div>
-                                    <div class="form-check  mb-3 ms-auto">
+                                    <div class="form-check  d-flex justify-content-center mb-3">
                                         <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
                                         <label class="form-check-label" for="form2Example3g">
                                             I agree all statements in <a href="TermOfService.html" class="text-body"><u>Terms of
                                                     service</u></a>
-                                            
+
                                         </label>
                                     </div>
-                                    <div class="mb-5 mx-4">
-                                        <a href="login.php" class="ca"> Already have an account?</a>
-                                    </div>
-                                    <div class=" d-flex justify-content-center ">
-                                        <button type=" submit" class="btn btn-primary px-3">Sign Up</button>
 
-                                    </div>
-
-
-                                </form>
                             </div>
+                            <div class=" d-flex justify-content-center ">
+                                <button type=" submit" class="btn btn-primary btn-block btn-lg gradient-custom-4  text-white">Sign Up</button>
+
+                            </div>
+                            <p class="text-center text-muted mt-5 mb-3">Have already an account? <a href="login.php" class="fw-bold text-body"><u>Login here</u></a></p>
+
+
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
